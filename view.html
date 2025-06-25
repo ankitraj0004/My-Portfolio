@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View My Projects</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0077cc;
+    }
+
+    .navbar .nav-links a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #0077cc;
+    }
+
+    /* Projects */
+    .projects-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #e0f7fa, #fff);
+    }
+
+    .projects-section h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      margin: 0 0 10px;
+      color: #0077cc;
+      font-size: 22px;
+    }
+
+    .project-content p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .view-button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .view-button:hover {
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 768px) {
+      .project-card {
+        width: 90%;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar .nav-links {
+        margin-top: 10px;
+      }
+
+      .navbar .nav-links a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="logo">Project View</div>
+    <div class="nav-links">
+      <a href="port.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#projects">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ✅ Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2>🚀 View My Projects</h2>
+
+    <div class="project-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="im1.png" alt="Project 1" class="project-image" />
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio website made using HTML, CSS, and JavaScript.</p>
+          <button class="view-button" onclick="location.href='https://yourportfolio.com'">View Project</button>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="im2.png" alt="Project 2" class="project-image" />
+        <div class="project-content">
+          <h3>Student Portal</h3>
+          <p>An interactive student management portal with login, course view, and grades.</p>
+          <button class="view-button" onclick="location.href='https://studentportal.com'">View Project</button>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="im3.png" alt="Project 3" class="project-image" />
+        <div class="project-content">
+          <h3>Weather App</h3>
+          <p>A live weather forecast app using OpenWeatherMap API and JavaScript.</p>
+          <button class="view-button" onclick="location.href='https://weatherapp.com'">View Project</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
